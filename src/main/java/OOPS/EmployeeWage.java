@@ -2,7 +2,7 @@ package OOPS;
 import java.util.Scanner;
 
 public class EmployeeWage {
-    public void EmployeeAttendance() {
+    public void EmployeeAttendance(){
         int IS_FULL_TIME = 1;
         double empCheck = Math.floor(Math.random() * 10) % 2;
         if (empCheck == IS_FULL_TIME)
@@ -12,7 +12,7 @@ public class EmployeeWage {
 
     }
 
-    public void CalculateDailyWage() {
+    public void CalculateDailyWage(){
         System.out.println("Enter numbers of hours worked");
         Scanner scanner = new Scanner(System.in);
         double totalHoursWorked = scanner.nextInt();
@@ -30,7 +30,7 @@ public class EmployeeWage {
 
     }
 
-    public void PartTimeEmpWage() {
+    public void PartTimeEmpWage(){
         int EmpWagePerHr = 20;
         int EmpHr = 8;
         int IsFullTime = 1;
@@ -50,6 +50,36 @@ public class EmployeeWage {
 
     }
 
+    public void EmpWageSwitchCase(){
+        int EmpWagePerHr = 20;
+        int EmpHr = 8;
+        int IsFullTime = 1;
+        int IsPartTime = 2;
+        int Salary = 0;
+
+        int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+        switch (empCheck) {
+            case 0:
+                EmpHr = 8;
+                Salary = (EmpHr * EmpWagePerHr);
+                System.out.println("Employee salary for full time is: " + Salary);
+                break;
+
+            case 1:
+                EmpHr = 4;
+                Salary = (EmpHr * EmpWagePerHr);
+                System.out.println("Employee salary for part time is: " + Salary);
+                break;
+
+            case 2:
+                EmpHr = 0;
+                Salary = (EmpHr * EmpWagePerHr);
+                System.out.println("Employee salary for Absent  is: " + Salary);
+                break;
+        }
+    }
+
+
     public static void main(String[] args) {
         System.out.println("welcome to employee wage");
         EmployeeWage object = new EmployeeWage();
@@ -57,5 +87,6 @@ public class EmployeeWage {
         object.EmployeeAttendance();
         object.CalculateDailyWage();
         object.PartTimeEmpWage();
+        object.EmpWageSwitchCase();
     }
 }
