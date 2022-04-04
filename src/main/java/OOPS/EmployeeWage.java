@@ -6,15 +6,15 @@ public class EmployeeWage {
         System.out.println("welcome to employee wage");
         EmployeeWage object = new EmployeeWage();
 
-        object.employeeAttendance();
-        object.calculateDailyWage();
-        object.partTimeEmpWage();
-        object.empWageSwitchCase();
-        object.empSalary();
-        object.empMaxSalary();
+        object.EmployeeAttendance();
+        object.CalculateDailyWage();
+        object.PartTimeEmpWage();
+        object.EmpWageSwitchCase();
+        object.EmpSalary();
+        object.EmpMaxSalary();
     }
 
-    public void employeeAttendance() {
+    public void EmployeeAttendance() {
         int IS_FULL_TIME = 1;
         double empCheck = Math.floor(Math.random() * 10) % 2;
         if (empCheck == IS_FULL_TIME)
@@ -24,7 +24,7 @@ public class EmployeeWage {
 
     }
 
-    public void calculateDailyWage() {
+    public void CalculateDailyWage() {
         System.out.println("Enter numbers of hours worked");
         Scanner scanner = new Scanner(System.in);
         double totalHoursWorked = scanner.nextInt();
@@ -42,7 +42,7 @@ public class EmployeeWage {
 
     }
 
-    public void partTimeEmpWage() {
+    public void PartTimeEmpWage() {
         int EmpWagePerHr = 20;
         int EmpHr = 8;
         int IsFullTime = 1;
@@ -62,7 +62,7 @@ public class EmployeeWage {
 
     }
 
-    public void empWageSwitchCase() {
+    public void EmpWageSwitchCase() {
         int EmpWagePerHr = 20;
         int EmpHr = 8;
         int IsFullTime = 1;
@@ -91,7 +91,7 @@ public class EmployeeWage {
         }
     }
 
-    public void empSalary() {
+    public void EmpSalary() {
         int IsFullTime = 2;
         int IsPartTime = 1;
         int PerHourSalary = 20;
@@ -123,7 +123,7 @@ public class EmployeeWage {
 
     }
 
-    public void empMaxSalary() {
+    public void EmpMaxSalary() {
         int IS_PART_TIME = 1;
         int IS_FULL_TIME = 2;
         int EmpRatePerHr = 20;
