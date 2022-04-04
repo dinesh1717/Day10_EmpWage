@@ -2,7 +2,19 @@ package OOPS;
 import java.util.Scanner;
 
 public class EmployeeWage {
-    public void EmployeeAttendance(){
+    public static void main(String[] args) {
+        System.out.println("welcome to employee wage");
+        EmployeeWage object = new EmployeeWage();
+
+        object.EmployeeAttendance();
+        object.CalculateDailyWage();
+        object.PartTimeEmpWage();
+        object.EmpWageSwitchCase();
+        object.EmpSalary();
+        object.EmpMaxSalary();
+    }
+
+    public void EmployeeAttendance() {
         int IS_FULL_TIME = 1;
         double empCheck = Math.floor(Math.random() * 10) % 2;
         if (empCheck == IS_FULL_TIME)
@@ -12,7 +24,7 @@ public class EmployeeWage {
 
     }
 
-    public void CalculateDailyWage(){
+    public void CalculateDailyWage() {
         System.out.println("Enter numbers of hours worked");
         Scanner scanner = new Scanner(System.in);
         double totalHoursWorked = scanner.nextInt();
@@ -30,7 +42,7 @@ public class EmployeeWage {
 
     }
 
-    public void PartTimeEmpWage(){
+    public void PartTimeEmpWage() {
         int EmpWagePerHr = 20;
         int EmpHr = 8;
         int IsFullTime = 1;
@@ -50,7 +62,7 @@ public class EmployeeWage {
 
     }
 
-    public void EmpWageSwitchCase(){
+    public void EmpWageSwitchCase() {
         int EmpWagePerHr = 20;
         int EmpHr = 8;
         int IsFullTime = 1;
@@ -78,19 +90,18 @@ public class EmployeeWage {
                 break;
         }
     }
-    public void EmpSalary(){
+
+    public void EmpSalary() {
         int IsFullTime = 2;
         int IsPartTime = 1;
         int PerHourSalary = 20;
-        int workingHour =0;
+        int workingHour = 0;
         int totalSalary = 0;
         int Salary;
 
-        for (int day = 1; day <= 20; day++)
-        {
+        for (int day = 1; day <= 20; day++) {
             int empCheck = (int) Math.floor(Math.random() * 10) % 2;
-            switch (empCheck)
-            {
+            switch (empCheck) {
 
                 case 0:
                     workingHour = 8;
@@ -104,15 +115,15 @@ public class EmployeeWage {
                     workingHour = 0;
                     break;
             }
-            Salary =workingHour * PerHourSalary ;
+            Salary = workingHour * PerHourSalary;
             totalSalary = totalSalary + Salary;
 
         }
         System.out.println("Employee has earned total salary in a month is: " + totalSalary);
 
     }
-    public void EmpMaxSalary()
-    {
+
+    public void EmpMaxSalary() {
         int IS_PART_TIME = 1;
         int IS_FULL_TIME = 2;
         int EmpRatePerHr = 20;
@@ -122,14 +133,12 @@ public class EmployeeWage {
         int Salary;
         int TotalWorkingDays = 0;
         int NumOfWorkingDays = 20;
-        int empHrs =0;
+        int empHrs = 0;
 
-        while (WorkingHour <= Max_Salary && TotalWorkingDays < NumOfWorkingDays)
-        {
+        while (WorkingHour <= Max_Salary && TotalWorkingDays < NumOfWorkingDays) {
             TotalWorkingDays++;
             int empCheck = (int) Math.floor(Math.random() * 10) % 3;
-            switch(empCheck)
-            {
+            switch (empCheck) {
                 case 0:
                     empHrs = 8;
                     break;
@@ -143,22 +152,10 @@ public class EmployeeWage {
                     break;
             }
             WorkingHour += empHrs;
-            System.out.println("Day#: " + TotalWorkingDays + " Emp Hr " + empHrs );
+            System.out.println("Day#: " + TotalWorkingDays + " Emp Hr " + empHrs);
         }
         int totalEmpWage = WorkingHour * EmpRatePerHr;
         System.out.println("total Emp Wage " + totalEmpWage);
 
     }
-
-    public static void main(String[] args) {
-        System.out.println("welcome to employee wage");
-        EmployeeWage object = new EmployeeWage();
-
-        object.EmployeeAttendance();
-        object.CalculateDailyWage();
-        object.PartTimeEmpWage();
-        object.EmpWageSwitchCase();
-        object.EmpSalary();
-        object.EmpMaxSalary();
-    }
-      }
+          }
