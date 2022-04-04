@@ -158,4 +158,4 @@ public class EmployeeWage {
         System.out.println("total Emp Wage " + totalEmpWage);
 
     }
-          }
+             }
